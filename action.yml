@@ -1,0 +1,46 @@
+name: "action-mutability-prioritizer"
+description: "Scan workflows for mutable action usage, score risk, and open an issue prioritizing pinning work."
+author: "Open Source Contributors"
+runs:
+  using: "node20"
+  main: "dist/index.js"
+branding:
+  color: "blue"
+  icon: "shield"
+inputs:
+  github-token:
+    description: "GitHub token with repo scope"
+    required: true
+    default: "${{ github.token }}"
+  issue-title-prefix:
+    description: "Prefix for the created issue title"
+    required: false
+    default: "Action Mutability Report"
+  issue-label:
+    description: "Label applied to created issues"
+    required: false
+    default: "mutability-report"
+  issue-mode:
+    description: "Issue handling mode: create|update"
+    required: false
+    default: "create"
+  fail-under:
+    description: "If overall score is below this number, fail the action"
+    required: false
+  paths:
+    description: "Comma-separated list of workflow paths to scan"
+    required: false
+    default: ".github/workflows"
+  verbose:
+    description: "Enable verbose logging"
+    required: false
+    default: "false"
+outputs:
+  overall-score:
+    description: "Overall mutability score"
+  issue-number:
+    description: "Issue number created or updated"
+  actions-scanned:
+    description: "Count of unique action references analyzed"
+  workflows-scanned:
+    description: "Number of workflow files scanned"
