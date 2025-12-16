@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Run mutability check
-        uses: ./  # or use the published Marketplace slug
+        uses: ronjang/gha-mutability-checker@67afcdcb4c8325ef83182c687c19f6b36bde5acf #v1
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           issue-title-prefix: Action Mutability Report
