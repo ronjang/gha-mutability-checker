@@ -1,4 +1,4 @@
-name: "action-mutability-prioritizer"
+name: "gha-mutability-check"
 description: "Scan workflows for mutable action usage, score risk, and open an issue prioritizing pinning work."
 author: "Open Source Contributors"
 runs:

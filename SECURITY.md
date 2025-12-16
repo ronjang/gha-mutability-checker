@@ -1,6 +1,6 @@
 # Security Policy
 
-If you discover a security vulnerability in action-mutability-prioritizer, please report it responsibly.
+If you discover a security vulnerability in gha-mutability-check, please report it responsibly.
 
 ## Reporting a Vulnerability
 

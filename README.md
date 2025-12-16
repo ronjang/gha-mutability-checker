@@ -1,4 +1,4 @@
-# action-mutability-prioritizer
+# gha-mutability-check
 
 Readymade Action that scans your repository's workflows, classifies action usage by mutability, scores risk, and opens an issue with a prioritized pinning plan.
 
@@ -26,7 +26,7 @@ jobs:
       issues: write
     steps:
       - uses: actions/checkout@v4
-      - name: Run mutability prioritizer
+      - name: Run mutability check
         uses: ./  # or use the published Marketplace slug
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
