@@ -4,7 +4,7 @@ If you discover a security vulnerability in action-mutability-prioritizer, pleas
 
 ## Reporting a Vulnerability
 
-- Email: security@example.com (replace with your preferred contact)
+- Email: gha@manjang.de
 - Please include a minimal reproduction if possible.
 - We aim to acknowledge reports within 3 business days.
 

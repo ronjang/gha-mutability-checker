@@ -1,6 +1,6 @@
 # action-mutability-prioritizer
 
-Action Marketplace-ready GitHub Action that scans your repository's workflows, classifies action usage by mutability, scores risk, and opens an issue with a prioritized pinning plan.
+Readymade Action that scans your repository's workflows, classifies action usage by mutability, scores risk, and opens an issue with a prioritized pinning plan.
 
 ## What it does
 - Scans workflow files (`.github/workflows/**/*.yml` / `.yaml`) for `uses:` in steps and reusable workflow calls.
@@ -59,10 +59,10 @@ Required for the job running this action:
 
 Label creation may require additional permissions depending on your org settings. If label creation fails, the action proceeds without applying the label.
 
-## Scoring philosophy
+## Scoring philosophy (SUBJECT TO CHANGE)
 The initial heuristic starts at 100 and subtracts penalties for mutable refs (branches, tags, missing refs) and applies a small transitive-risk adjustment. SHA pins and docker digests score highest. The scoring module is pluggable; future versions can swap weights or logic without changing the scanner.
 
-## Limitations
+## Limitations and outlook
 - Transitive dependency analysis is not implemented; risk is marked as "unknown" to encourage review of nested actions and downloads.
 - Line numbers for findings are not guaranteed; file/job/step context is always provided.
 
